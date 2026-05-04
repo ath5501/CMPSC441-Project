@@ -4,7 +4,7 @@ Wrapper around the Ollama local LLM API.
 Handles all model calls with configurable parameters and role-based prompts.
 
 Ollama must be running locally: https://ollama.com
-Default model: llama3 — override via OLLAMA_MODEL env var.
+Default model: llama3.2 — override via OLLAMA_MODEL env var.
 Default host:  http://localhost:11434 — override via OLLAMA_HOST env var.
 """
 
@@ -16,7 +16,7 @@ from typing import Optional
 
 # ── Model Configuration ───────────────────────────────────────────────────────
 
-DEFAULT_MODEL = os.environ.get("OLLAMA_MODEL", "llama3")
+DEFAULT_MODEL = os.environ.get("OLLAMA_MODEL", "llama3.2")
 OLLAMA_HOST   = os.environ.get("OLLAMA_HOST",  "http://localhost:11434")
 
 # Parameter rationale:
